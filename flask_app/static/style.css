@@ -1,0 +1,73 @@
+* {
+    /* outline: 1.5px solid red; */
+    /* background-color: black; */
+}
+
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+border: 2px solid #ccc;
+background-color: #eee;
+border-radius: 5px;
+padding: 16px;
+margin: 16px 0;
+}
+
+/* Clear floats after containers */
+.container::after {
+content: "";
+clear: both;
+display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container img {
+float: left;
+margin-right: 20px;
+border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.container span {
+font-size: 20px;
+margin-right: 15px;
+}
+
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+.container {
+    text-align: center;
+}
+
+.container img {
+    margin: auto;
+    float: none;
+    display: block;
+}
+}
+
+.arrow {
+border: solid black;
+border-width: 0 3px 3px 0;
+display: inline-block;
+padding: 3px;
+}
+
+.right {
+transform: rotate(-45deg);
+-webkit-transform: rotate(-45deg);
+}
+
+.left {
+transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+}
+
+.up {
+transform: rotate(-135deg);
+-webkit-transform: rotate(-135deg);
+}
+
+.down {
+transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+}
